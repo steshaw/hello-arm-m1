@@ -1,7 +1,7 @@
 .text
-.global _start
+.global _main
 
-_start:
+_main:
   // Write string.
   mov X0, #1         // 1 = stdout
   adr X1, helloworld // string to print
