@@ -1,5 +1,5 @@
 hello: hello.o
-	ld -macosx_version_min 11.0.0 -o hello hello.o -lSystem -syslibroot `xcrun -sdk macosx --show-sdk-path` -arch arm64
+	clang -arch arm64 -o hello hello.o
 
 hello.o: hello.s
-	as -arch arm64 -o hello.o hello.s
+	clang -arch arm64 -o hello.o -c hello.S
