@@ -1,5 +1,5 @@
-HelloWorld: HelloWorld.o
-	ld -macosx_version_min 11.0.0 -o HelloWorld HelloWorld.o -lSystem -syslibroot `xcrun -sdk macosx --show-sdk-path` -e _start -arch arm64
+hello: hello.o
+	ld -macosx_version_min 11.0.0 -o hello hello.o -lSystem -syslibroot `xcrun -sdk macosx --show-sdk-path` -e _start -arch arm64
 
-HelloWorld.o: HelloWorld.s
-	as -o HelloWorld.o HelloWorld.s
+hello.o: hello.s
+	as -arch arm64 -o hello.o hello.s
